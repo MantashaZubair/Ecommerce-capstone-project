@@ -27,11 +27,15 @@ else if(email.value==="admin@admin.com" && password.value==="12345"){
 //for cart(incerament or decreament) js code
 
 
-
+function product(){
 var product_total_amount=document.getElementById("product_total_amount");
 var shipping_charge=document.getElementById("shipping_charge");
 var total_cart_amt=document.getElementById("total_cart_amt");
+return product;
+}
+
 function decreaseNumber(incdec,itemprice){
+  product()
   var itemvalue = document.getElementById(incdec);
   var itemprice=document.getElementById(itemprice)
   if(itemvalue.value <= 0){
@@ -50,6 +54,7 @@ function decreaseNumber(incdec,itemprice){
   }
 }
 function increaseNumber(incdec,itemprice){
+product()
   var itemvalue = document.getElementById(incdec);
   var itemprice=document.getElementById(itemprice)
   if(itemvalue.value >= 5){
